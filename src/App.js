@@ -1,8 +1,8 @@
-import './App.css';
+import SiteContainer from './containers/SiteContainer';
 
 function App() {
   return (
-    <div>Sara's website</div>
+    <div><SiteContainer></SiteContainer></div>
   );
 }
 
