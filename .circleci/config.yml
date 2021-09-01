@@ -1,6 +1,8 @@
+# .circleci/config.yml
+
 version: 2.1
 orbs:
-  aws-s3: circleci/aws-s3@1.0.4
+  aws-s3: circleci/aws-s3@3.0.0
 jobs:
   test:
     docker:
@@ -8,8 +10,8 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      # - run: npm test
-      # - run: npm run lint
+      - run: npm test
+      - run: npm run lint
   deploy:
     docker:
       - image: circleci/node
@@ -21,7 +23,7 @@ jobs:
       - run: npm run build
       - aws-s3/sync:
           from: build
-          to: 's3://sara-site-2021/'
+          to: "s3://sara-site-2021"
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400" \
