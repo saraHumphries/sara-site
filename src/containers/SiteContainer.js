@@ -3,6 +3,7 @@ import Project from "../components/Project";
 import vetGif from '../assets/images/vet_gif.gif';
 import testGif from '../assets/images/test_gif.gif';
 import coronaGif from '../assets/images/coronavirus_gif.gif';
+import educationGif from '../assets/images/education_gif.gif';
 
 const SiteContainer = function() {
 
@@ -28,6 +29,13 @@ const coronavirusProject = {
     gitLink: "https://github.com/saraHumphries/corona_virus_tracker",
 };
 
+const educationProject = {
+    title: "Educational spelling app",
+    date: "July 2021",
+    description: "CodeClan - Week 9 - Group Project - App created using React, MongoDB and multiple APIs",
+    gitLink: "https://github.com/ttinning/education_station",
+};
+
 
 
 
@@ -46,8 +54,9 @@ const coronavirusProject = {
                 <section id='project-section'>
                     <div id='projects'>
                         <Project project = {vetProject} gif = {vetGif}></Project>
-                        <Project project = {psychometricTestProject} gif = {testGif} ></Project>
                         <Project project = {coronavirusProject} gif={coronaGif}></Project>
+                        <Project project = {educationProject} gif = {educationGif}></Project>
+                        <Project project = {psychometricTestProject} gif = {testGif} ></Project>
                     </div>
                 </section>
             </main>
