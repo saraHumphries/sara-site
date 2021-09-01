@@ -1,9 +1,20 @@
 import "./SiteContainer.css"
 import Project from "../components/Project";
+import vetGif from '../assets/images/vet_gif.gif';
 
 const SiteContainer = function() {
 
+// const vetImage = require('../assets/images/vet_gif.gif').default;
 
+const vetProject = {
+    title: "Vet app",
+    date: "June 2021",
+    description: "A solo project using Flask/Python and an relational DB to store, update, read, delete data.",
+    gitLink: "https://github.com/saraHumphries/vet_admin_app",
+    gifImage: {vetGif}
+};
+
+// console.log('image', vetProject.gifImage);
 
 
 
@@ -21,10 +32,8 @@ const SiteContainer = function() {
                 <p>blurb</p>
                 <section id='project-section'>
                     <div id='projects'>
-                        <Project></Project>
-                        <Project></Project>
-                        <Project></Project>
-                        <Project></Project>
+                        <Project project = {vetProject} gif = {vetGif}></Project>
+                        
                     </div>
                 </section>
             </main>

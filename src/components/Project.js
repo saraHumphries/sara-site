@@ -1,10 +1,11 @@
 
-const Project = function() {
+const Project = function({project, gif}) {
     return (
         <div className='project'>
-            <h2>Project title</h2>
-            <p>Project description</p>
-            <a href='/'>Link to project</a>
+            <h2>{project.title}</h2>
+            <img src={gif} alt='Vet app gif demo'></img>
+            <p>{project.description}</p>
+            <a href={project.gitLink}>Link to GitHub repo</a>
         </div>
     );
 };
